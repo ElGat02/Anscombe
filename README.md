@@ -7,6 +7,6 @@ Práctica 1 - Mineria de datos
 # Universidad Politécnica Salesiana
 
 **Carrera:** Computación  
-**Periodo:** 66  
+**Periodo:** 2025-2025  
 **Estudiante:** Jairo Salazar
 

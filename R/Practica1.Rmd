@@ -1,0 +1,71 @@
+---
+title: "Practica 1 datasaurus"
+author: "Jairo Salazar"
+date: "2025-04-03"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r libraries}
+library(dplyr)
+library(ggplot2)
+library(tidyverse)
+library(datasauRus)
+```
+
+# Resumen estadístico de cada conjunto de datos
+```{r uno}
+datasaurus_dozen %>%
+  group_by(dataset) %>%
+  summarize(
+    
+    mean_x = mean (x),
+    
+    mean_y = mean(y),
+    
+    std_dev_x = sd(x),
+    
+    std_dev_y = sd(y),
+    
+    corr_x_y = cor(x,y) 
+  )
+```
+# Figuras
+
+```{r dos}
+ggplot (datasaurus_dozen, aes (x = x, y = y, colour = dataset))+
+  
+  geom_point()+
+  
+  theme_void()+
+  
+  theme(legend.position = "none")+
+  
+  facet_wrap(~dataset, ncol = 3)
+
+```
+
+# Regresion datasaurus
+```{r tres}
+# Graficar todos los datasets sin regresión
+ggplot(datasaurus_dozen, aes(x = x, y = y, colour = dataset)) +
+  geom_point(alpha = 0.6) +
+  facet_wrap(~dataset, ncol = 3) +
+  theme_minimal() +
+  theme(legend.position = "none") +
+  
+  # Agregar la regresión solo al dataset high_lines
+  geom_smooth(
+    data = filter(datasaurus_dozen, dataset == "high_lines"),
+    method = "lm",
+    se = FALSE,
+    color = "black"
+  ) +
+  
+  labs(title = "Solo 'high_lines' con línea de regresión")
+
+```
+

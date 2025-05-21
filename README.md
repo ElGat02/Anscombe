@@ -1,6 +1,4 @@
-# Anscombe
 
-Práctica 1 - Mineria de datos
 
 ![Logo Universidad Politécnica Salesiana](Assets/logo-ups.png)
 
@@ -11,6 +9,8 @@ Práctica 1 - Mineria de datos
 **Estudiante:** Jairo Salazar
 
 ---
+
+# Anscombe Práctica 1 - Mineria de datos
 
 ## Introducción teórica al Cuarteto de Anscombe
 

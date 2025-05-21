@@ -69,3 +69,8 @@ ggplot(datasaurus_dozen, aes(x = x, y = y, colour = dataset)) +
 
 ```
 
+## Regresión personal: ---  
+
+![Regresión propia](C:/Users/Haws/OneDrive/Escritorio/Practica1-Mineria/Anscombe/R/RegresionPersonal.jpg)
+
+
